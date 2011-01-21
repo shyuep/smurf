@@ -1,0 +1,28 @@
+SMURF Molecule Reader and Fiddler (SMURF).
+Version 1.0
+
+This is a programme written in Java to interprete and manipulate commonly used
+molecule file formats.  Currently supported file types include Gaussian 03 input
+files (.com), xyz files (.xyz) and generic Z-Matrix specification files (any
+extension other than .com and .xyz).
+
+Usage:
+-help (display this help message.)
+-convert input_file output_file (Convert input file to output file.
+ File formats are automatically determined from file extensions.)
+-rotate=atom1,atom2,angle (Rotate molecule by angle (in integral degrees) about 
+ bond between atom1 and atom2)
+-symmetry file1 file2 ... (Get the point group and symmetry information on 
+ supplied files)
+-ht (-sub=substitutee) (-subwith=substituent) filename (Generates test structures for based on substitution
+ of distinct hydrogens with substitutent.  Valid options are CH3 or atomic symbols.
+-ext=atom_index filename (Generates extensions of the molecule based on substitution 
+ of distinct hydrogens bonded to atom at atom_index.  Only heavy atoms are allowed.
+-coord filename1 (Show representations of input files in format defined by format tag.  
+ Defaults to listing of cartesian coordinates.)
+-network filename1 (Provides listing of connected atoms)
+
+Other options (*) is the default:
+-format=zmat|(xyz)|gaussian (Specifies format for output files)
+
+Please report all bugs to Shyue Ping Ong (shyue@mit.edu).
